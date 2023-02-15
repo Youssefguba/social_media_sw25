@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:social_media_sw25/screens/login_screen.dart';
+import 'package:social_media_sw25/screens/welcome_screen.dart';
 import 'package:social_media_sw25/services/firebase_authentication.dart';
 
 import 'home_screen.dart';
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(milliseconds: 5000), () {
       if (Auth.instance.user == null) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return LoginScreen();
+          return WelcomeScreen();
         }));
       } else {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Lottie.asset('assets/animation/welcome.json'),
+        child: Lottie.asset('assets/animations/welcome.json'),
       ),
     );
   }
