@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(milliseconds: 5000), () {
+    Future.delayed(Duration(milliseconds: 2000), () {
       if (Auth.instance.user == null) {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
           return WelcomeScreen();

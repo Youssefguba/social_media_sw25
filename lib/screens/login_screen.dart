@@ -60,7 +60,10 @@ class LoginScreen extends StatelessWidget {
                       .doc(userCredential.user!.uid)
                       .set({
                     'email': email,
-                  });
+                  },
+                    SetOptions(merge: true),
+
+                  );
 
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => InfoScreen()));

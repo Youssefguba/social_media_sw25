@@ -35,7 +35,8 @@ class Auth {
     BuildContext context,
   ) async {
     try {
-      final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      final userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -53,7 +54,7 @@ class Auth {
   Future<void> signOut() async {
     try {
       await FirebaseAuth.instance.signOut();
-    }  catch (e) {
+    } catch (e) {
       print('error in : $e');
     }
   }
